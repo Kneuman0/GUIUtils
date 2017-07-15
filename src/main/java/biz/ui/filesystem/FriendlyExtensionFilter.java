@@ -74,7 +74,7 @@ public class FriendlyExtensionFilter{
 	protected List<String> getAllPossibleCases(String... exts){
 		Set<String> allExts = new HashSet<>();
 		for(String ext : exts){
-			allExts.addAll(getAllPossibleCases(ext));
+			allExts.addAll(getAllPossibleExtensions(ext));
 		}
 		return new ArrayList<>(allExts);
 	}
