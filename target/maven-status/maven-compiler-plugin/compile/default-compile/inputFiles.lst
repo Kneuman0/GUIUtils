@@ -13,8 +13,7 @@
 /home/karottop/git/GUIUtils/src/main/java/biz/ui/features/AddButton.java
 /home/karottop/git/GUIUtils/src/main/java/biz/ui/controller/utils/ControllerUtils.java
 /home/karottop/git/GUIUtils/src/main/java/biz/ui/features/IndexedGridPane.java
-/home/karottop/git/GUIUtils/src/main/java/biz/ui/launchers/generic/SigningPopupLauncher.java
-/home/karottop/git/GUIUtils/src/main/java/biz/ui/controllers/generic/SigningCredsController.java
 /home/karottop/git/GUIUtils/src/main/java/biz/ui/features/DownArrow.java
 /home/karottop/git/GUIUtils/src/main/java/biz/ui/launchers/generic/PopUpComponentLauncher.java
+/home/karottop/git/GUIUtils/src/main/java/biz/ui/filesystem/FriendlyExtensionFilter.java
 /home/karottop/git/GUIUtils/src/main/java/biz/ui/controller/utils/IPopupController.java
