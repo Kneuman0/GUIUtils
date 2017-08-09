@@ -2,6 +2,8 @@ package biz.ui.launchers.generic;
 
 import biz.ui.controller.utils.IPopupController;
 import javafx.application.Application;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
 /**
@@ -37,8 +39,9 @@ public abstract class AppLauncher <Controller extends IPopupController> extends 
 		(stage, getStageTitle(), getClass().getResource(getPathtoFXML()));
 	
 		mainWindow.getStage().setResizable(true);
-					
+			
 		mainWindow.show();
+
 	}
 
 }
