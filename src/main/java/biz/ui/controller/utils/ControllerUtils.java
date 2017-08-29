@@ -69,6 +69,13 @@ public abstract class ControllerUtils implements IPopupController{
 		return error.showAndWait();
 	}
 	
+	public File requestFile(String title, String initialFileName){
+		FileChooser chooser = new FileChooser();
+		chooser.setTitle(title);
+		if(initialFileName != null) chooser.setInitialFileName(initialFileName);
+		return chooser.showOpenDialog(getWindow());
+	}
+	
 	public File requestFile(String title, String initialFileName, ExtensionFilter filter){
 		FileChooser chooser = new FileChooser();
 		chooser.setTitle(title);
@@ -83,6 +90,13 @@ public abstract class ControllerUtils implements IPopupController{
 		if(initialFileName != null) chooser.setInitialFileName(initialFileName);
 		chooser.getExtensionFilters().addAll(filters);
 		return chooser.showOpenDialog(getWindow());
+	}
+	
+	public List<File> requestFiles(String title, String initialFileName){
+		FileChooser chooser = new FileChooser();
+		chooser.setTitle(title);
+		if(initialFileName != null) chooser.setInitialFileName(initialFileName);
+		return chooser.showOpenMultipleDialog(getWindow());
 	}
 	
 	public List<File> requestFiles(String title, String initialFileName, List<ExtensionFilter> filters){
