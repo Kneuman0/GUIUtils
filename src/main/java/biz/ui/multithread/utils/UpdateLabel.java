@@ -2,6 +2,7 @@ package biz.ui.multithread.utils;
 
 import javafx.scene.control.Label;
 
+@SuppressWarnings("restriction")
 public class UpdateLabel implements Runnable {
 	Label label;
 	String textToUpdate;

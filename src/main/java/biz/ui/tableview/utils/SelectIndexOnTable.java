@@ -2,6 +2,7 @@ package biz.ui.tableview.utils;
 
 import javafx.scene.control.TableView;
 
+@SuppressWarnings("restriction")
 public class SelectIndexOnTable implements Runnable {
 	private TableView<?> table;
 	private int index;

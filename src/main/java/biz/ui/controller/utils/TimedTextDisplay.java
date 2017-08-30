@@ -2,6 +2,7 @@ package biz.ui.controller.utils;
 
 import javafx.scene.control.Label;
 
+@SuppressWarnings("restriction")
 public class TimedTextDisplay implements Runnable {
 	
 	private String startVal;

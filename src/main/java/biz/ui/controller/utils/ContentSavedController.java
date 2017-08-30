@@ -3,6 +3,7 @@ package biz.ui.controller.utils;
 import javafx.event.EventHandler;
 import javafx.stage.WindowEvent;
 
+@SuppressWarnings("restriction")
 public abstract class ContentSavedController implements IPopUpSaveController{
 	
 	public abstract void save();

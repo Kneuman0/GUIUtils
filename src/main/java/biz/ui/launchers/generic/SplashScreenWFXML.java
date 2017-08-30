@@ -6,6 +6,7 @@ import javafx.application.Preloader;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+@SuppressWarnings("restriction")
 public abstract class SplashScreenWFXML <Controller extends IPopupController> extends Preloader{
 	
 	/**

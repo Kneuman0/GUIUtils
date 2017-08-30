@@ -15,6 +15,7 @@ import javafx.stage.FileChooser.ExtensionFilter;
  * @author karottop
  *
  */
+@SuppressWarnings("restriction")
 public class FriendlyExtensionFilter{
 	{filters = new ArrayList<>();}
 	

@@ -6,6 +6,7 @@ import biz.ui.features.InformedProgressBar;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 
+@SuppressWarnings("restriction")
 public abstract class ProgressSplashScreen extends SplashScreen{
 	
 	private InformedProgressBar bar;

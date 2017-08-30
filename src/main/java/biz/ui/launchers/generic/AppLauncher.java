@@ -2,8 +2,6 @@ package biz.ui.launchers.generic;
 
 import biz.ui.controller.utils.IPopupController;
 import javafx.application.Application;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
 /**
@@ -15,6 +13,7 @@ import javafx.stage.Stage;
  *
  * @param <Controller>
  */
+@SuppressWarnings("restriction")
 public abstract class AppLauncher <Controller extends IPopupController> extends Application{
 
 	/**

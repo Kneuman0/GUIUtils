@@ -7,6 +7,7 @@ import biz.ui.controller.utils.IPopupController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 
+@SuppressWarnings("restriction")
 public class PopUpComponentLauncher <Controller extends IPopupController, ParentNode extends Node>{
 	
 	private Controller controller;

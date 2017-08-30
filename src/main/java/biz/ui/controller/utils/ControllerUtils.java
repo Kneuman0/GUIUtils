@@ -3,11 +3,6 @@ package biz.ui.controller.utils;
 import java.io.File;
 import java.util.List;
 import java.util.Optional;
-
-
-
-
-
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Alert.AlertType;
@@ -19,6 +14,7 @@ import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
+@SuppressWarnings("restriction")
 public abstract class ControllerUtils implements IPopupController{
 	
 	protected Stage stage;

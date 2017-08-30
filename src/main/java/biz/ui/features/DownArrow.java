@@ -14,6 +14,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
+@SuppressWarnings("restriction")
 public class DownArrow {
 	
 	

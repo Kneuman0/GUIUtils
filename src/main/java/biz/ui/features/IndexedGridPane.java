@@ -4,6 +4,7 @@ import javafx.collections.ObservableList;
 import javafx.scene.Node;
 import javafx.scene.layout.GridPane;
 
+@SuppressWarnings("restriction")
 public class IndexedGridPane extends GridPane{
 		
 		

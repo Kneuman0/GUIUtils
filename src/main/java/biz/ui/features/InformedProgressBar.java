@@ -5,6 +5,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.layout.VBox;
 
+@SuppressWarnings("restriction")
 public class InformedProgressBar extends VBox{
 	
 	private ProgressBar bar;

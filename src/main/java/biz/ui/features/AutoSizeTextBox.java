@@ -7,6 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
 import javafx.scene.text.Text;
 
+@SuppressWarnings("restriction")
 public class AutoSizeTextBox extends TextField{
 	
 	public AutoSizeTextBox(String contents){
