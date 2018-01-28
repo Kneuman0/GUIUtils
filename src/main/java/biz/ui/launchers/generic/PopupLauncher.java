@@ -5,15 +5,17 @@ import java.net.URL;
 
 import biz.ui.controller.utils.IPopupController;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 @SuppressWarnings("restriction")
 public class PopupLauncher <Controller extends IPopupController>{
 	
-	Controller controller;
-	Stage stage;
+	protected Controller controller;
+	protected Stage stage;
 	
 	public PopupLauncher(Stage stage, String title, URL fxmlLocation){
 		this.stage = stage;
@@ -45,6 +47,13 @@ public class PopupLauncher <Controller extends IPopupController>{
 		this(new Stage(), title, fxmlLocation);		
 	}
 	
+	public PopupLauncher(String title, Parent parent) {
+		this.stage = new Stage();
+		this.stage.setTitle(title);
+		Scene scene = new Scene(parent);
+		stage.setScene(scene);
+	}
+	
 
 	
 	public Controller getController(){
@@ -57,5 +66,20 @@ public class PopupLauncher <Controller extends IPopupController>{
 	
 	public Stage getStage(){
 		return stage;
+	}
+	
+	public class DisplayLabelThread extends Thread{
+		private Label label;
+		private String string;
+		
+		public DisplayLabelThread(Label label, String string){
+			this.label = label;
+			this.string = string;
+		}
+		
+		@Override
+		public void run() {
+			label.setText(string);
+		}
 	}
 }

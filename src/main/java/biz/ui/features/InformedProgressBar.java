@@ -8,8 +8,8 @@ import javafx.scene.layout.VBox;
 @SuppressWarnings("restriction")
 public class InformedProgressBar extends VBox{
 	
-	private ProgressBar bar;
-	private Label progressMessage;
+	protected ProgressBar bar;
+	protected Label progressMessage;
 	
 	public InformedProgressBar(){
 		bar = new ProgressBar();
@@ -49,6 +49,36 @@ public class InformedProgressBar extends VBox{
 	public void updateProgress(double progress, String progressMessage){
 		this.updateProgress(progress);
 		this.progressMessage.setText(progressMessage);
+	}
+	
+	public class DisplayLabelThread extends Thread{
+		private Label label;
+		private String string;
+		
+		public DisplayLabelThread(Label label, String string){
+			this.label = label;
+			this.string = string;
+		}
+		
+		@Override
+		public void run() {
+			label.setText(string);
+		}
+	}
+	
+	
+	public class UpdateProgress implements Runnable{
+		private double progress;
+		
+		public UpdateProgress(double progress) {
+			this.progress = progress;
+		}
+
+		@Override
+		public void run() {
+			updateProgress(progress);
+		}
+		
 	}
 
 }

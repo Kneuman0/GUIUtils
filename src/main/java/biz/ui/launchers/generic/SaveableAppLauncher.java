@@ -1,21 +1,13 @@
 package biz.ui.launchers.generic;
 
-import biz.ui.controller.utils.IPopupController;
-import javafx.application.Application;
+import java.net.URL;
+
+import biz.ui.controller.utils.IPopUpSaveController;
+import javafx.scene.Parent;
 import javafx.stage.Stage;
 
-/**
- * Extends this class when creating a new application. All you need to do is pass in the
- * relative path to the fxml file (including the controller and the extension).
- * 
- * use this with a main method launcher class
- * @author karottop
- *
- * @param <Controller>
- */
-@SuppressWarnings("restriction")
-public abstract class AppLauncher <Controller extends IPopupController> extends Application{
-	
+public abstract class SaveableAppLauncher <Controller extends IPopUpSaveController> extends AppLauncher<Controller>{
+
 	/**
 	 * Override this method and return the relative path to fxml file.
 	 * for example:
@@ -32,15 +24,17 @@ public abstract class AppLauncher <Controller extends IPopupController> extends 
 	
 	public abstract void init();
 	
-	
-	public void start(Stage stage){
+	@Override
+	public void start(Stage stage) {
 		PopupLauncher<Controller> mainWindow = new PopupLauncher<Controller>
 		(stage, getStageTitle(), getClass().getResource(getPathtoFXML()));
 	
 		mainWindow.getStage().setResizable(true);
 			
 		mainWindow.show();
-
+		IPopUpSaveController saveCon = (IPopUpSaveController)mainWindow.getController();
+		stage.getScene().getWindow().setOnCloseRequest(saveCon.getOnCloseRequestListener());
 	}
+	
 
 }

@@ -6,6 +6,7 @@ import java.net.URL;
 import biz.ui.controller.utils.IPopupController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.control.Label;
 
 @SuppressWarnings("restriction")
 public class PopUpComponentLauncher <Controller extends IPopupController, ParentNode extends Node>{
@@ -42,6 +43,21 @@ public class PopUpComponentLauncher <Controller extends IPopupController, Parent
 
 	public void setController(Controller controller) {
 		this.controller = controller;
+	}
+	
+	public class DisplayLabelThread extends Thread{
+		private Label label;
+		private String string;
+		
+		public DisplayLabelThread(Label label, String string){
+			this.label = label;
+			this.string = string;
+		}
+		
+		@Override
+		public void run() {
+			label.setText(string);
+		}
 	}
 	
 	
