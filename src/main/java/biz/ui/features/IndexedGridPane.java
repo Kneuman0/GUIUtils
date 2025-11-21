@@ -23,7 +23,7 @@ public class IndexedGridPane extends GridPane{
 		    return result;
 		}
 		
-		public int getRowCount() {
+		public int getManagedRowCount() {
 	        int numRows = getRowConstraints().size();
 	        for (int i = 0; i < getChildren().size(); i++) {
 	            Node child = getChildren().get(i);
